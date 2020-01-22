@@ -1,5 +1,7 @@
-.reveal section img { 
+/* Remove some ugly default image styling */
+.reveal section img {
     background:none; 
     border:none; 
     box-shadow:none; 
 }
+
