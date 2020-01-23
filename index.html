@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -36,6 +36,13 @@
 				<!-- About me  -->
 				<section>
 					<img src="img/about-me.jpg" alt="About me">
+
+					<aside class="notes">
+						<ul>
+							<li>Présentation brève en une ou deux phrase.</li>
+							<li>C'est mon premier 12@13.</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- Contenu -->
@@ -69,16 +76,103 @@
 							<footer>— <a href="raspberrypi.org">raspberrypi.org</a></footer>
 						</blockquote>
 						<img src="img/rpi-creditcard.JPG" alt="A Raspberry Pi on top of a credit card" style="width: 50%;">
+						<aside class="notes">
+							TODO : fill this.
+						</aside>
 					</section>
 					<section>
-						
+						<ul>
+							<li>Créé en 2012</li>
+							<li class="fragment">19M d'unités vendues (2018)</li>
+							<li class="fragment">🏭 → Chine, Pays de Galles et Japan</li>
+							<li class="fragment">⚠️ Rpi ≠ Arduino !</li>
+							<li class="fragment">Le premier modèle → <code>Model A</code></li>
+						</ul>
+						<img src="img/rpi-logo.png" alt="Raspberry pi logo (small)" width="30%">
+						<aside class="notes">
+							<ul>
+								<li>
+									Le Rpi est créé en 2012 aux royaumes unis par la fondation Raspberry Pi qui est une association caritative fondée 
+									en 2009 pour encourager l'aprentissage des bases de la programmation dans les écoles partout dans le monde (mais pas que, on verra ça plutard dans la préz).
+								</li>
+								<li>
+									En 2018, c'est pas moins de 19M d'unités vendues dans le monde. En 2015, il est classé meilleur oridnateur britanique en terme de vente (mieux que les Amstrad !)
+								</li>
+								<li>
+									Au tout début, les rpi étaient fabriqués en Chine. Après un certain temps, Sony a commencé à en fabriquer dans certaines usine au Pays de Galle et au Japon. 
+									La qualité du produit final est la même peu  importe l'usine dans lequel il est fabriqué.
+								</li>
+								<li>
+									Attention, il ne faut pas confondre le Rpi qui est un nano-ordinateur (ou ordinateur mono carte) avec l'Arduino qui est un microcontrôleur (pas de ports vidéo, ...) 
+								</li>
+							</ul>
+						</aside>
+					</section>
+					
+					<!-- Question -->
+					<section>
+						<h3>Pourquoi "Raspberry Pi" ?</h3>
+						<img src="img/but-why.gif" alt="">
+					</section>
+					
+					<section>
+						<ul>
+							<li><b>"Raspberry"</b> → Comme Apple 🍏, Tangerine Computers 🍊, Apricot Computers...</li>
+							<li class="fragment"><b>"Pi"</b> → Python Interpreter 🐍</li>
+						</ul>
 					</section>
 
 					<!-- Hardware -->
 					<section>
 						<h3>Hardware</h3>
 					</section>
-
+					<section>
+						<img src="img/rpi-models-list.png" alt="List of all the Raspberry Pi models">
+						<aside class="notes">
+						</aside>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Infos hardware :  
+							```bash
+							cat /proc/cpuinfo
+							```
+						</textarea>
+					</section>
+					<section>
+						<figure>
+							<img src="img/capture-rpi-agence.jpg" width="70%" alt="output of cat /proc/cpuinfo shows the serial number of the softeam's Rpi.">
+							<figcaption>
+								Sortie de la commande <code>cat /proc/cpuinfo</code> sur le Rpi à l'accueil (Agence Rennes)
+							</figcaption>
+						</figure>
+						<aside class="notes">
+							<ul>
+								<li>Sortie de la commande executé sur la Rpi connecté à l'écran d'accueil (sur lequel est hebergé l'appli welcome)</li>
+								<li>La ligne "revision" permet d'identifier le modèle du Rpi.</li>
+								<li>En googlant ce code, on trouve le modèle qui lui est associé.</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<figure>
+							<img src="img/rpi-models-list-softeam.png" width="70%" alt="output of cat /proc/cpuinfo shows the serial number of the Softeam's Rpi.">
+							<figcaption>
+								Modèle du Rpi à l'accueil
+							</figcaption>
+						</figure>
+					</section>
+					<section>
+						<figure>
+							<img src="img/rpi-models-list-mine.png" width="70%" alt="output of cat /proc/cpuinfo shows the serial number of my personal Rpi.">
+							<figcaption>
+								Modèle du Rpi de démo.
+							</figcaption>
+						</figure>
+						<aside class="notes">
+							
+						</aside>
+					</section>
 					<!-- Software -->
 					<section>
 						<h3>Software</h3>

@@ -13,3 +13,7 @@ blockquote footer {
     font-size: small;
     text-align: right;
 }
+
+figcaption {
+    font-size: medium;
+}
