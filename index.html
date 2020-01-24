@@ -120,7 +120,7 @@
 					
 					<section>
 						<ul>
-							<li><b>"Raspberry"</b> → Comme Apple 🍏, Tangerine Computers 🍊, Apricot Computers...</li>
+							<li><b>"Raspberry"</b> → comme Apple 🍏, Tangerine Computers 🍊, Apricot Computers...</li>
 							<li class="fragment"><b>"Pi"</b> → Python Interpreter 🐍</li>
 						</ul>
 					</section>
@@ -182,24 +182,31 @@
 					<section>
 						<div style="text-align: left; float: left;">
 							<ol style="font-size: 25px;">
-								<li class="fragment">CPU: Quad-core ARM Cortex-A53 (1.4GHz)</li>
-								<li class="fragment">Ethernet: Gigabit Ethernet + support PoE</li>
+								<li class="fragment">SoC : CPU Quad-core ARM + GPU + 1 GO DDR3 RAM</li>
+								<li class="fragment">Ethernet: Gigabit Ethernet + PoE</li>
 								<li class="fragment">Dual-band 802.11ac wireless LAN + Bluetooth 4.2</li>
 								<li class="fragment">4 x USB 2.0</li>
-								<li class="fragment"></li>
+								<li class="fragment">Micro SD Card Slot</li>
+								<li class="fragment">GPIO 40 pins</li>
+								<li class="fragment">Audio/Video composite</li>
+								<li class="fragment">HDMI Port</li>
+								<li class="fragment">Power: 5V/2.5A DC power input</li>
 							</ol>
 						</div>
 
 						<div style="text-align: right; float: right;">
-							<img src="img/rpi-3b-plus.png" width="60%" alt="Functional block schematic of the Raspberry-Pi.">
+							<img src="img/rpi-3b-plus.png" width="57%" alt="Functional block schematic of the Raspberry-Pi.">
 						</div>
 
 						<aside class="notes">
 							<ul>
-								<li>CPU: dissipateur thermique ajouté par rapport à la version précédente qui permet une meilleure aération du CPU.</li>
-								<li>PoE (Power Over Ethernet) qui permet d'alimenter le Rpi grâce au câble ethernet (avec un module supplémentaire à brancher aux 4 pins isolés.</li>
+								<li>un SoC (System on a Chip) de la marque Broadcom </li>
+								<li>Ajout d'un dissipateur thermique ajouté par rapport à la version précédente qui permet une meilleure aération</li>
+								<li>PoE (Power Over Ethernet) qui permet d'alimenter le Rpi grâce au câble ethernet (avec un module supplémentaire à brancher aux 4 pins isolés).</li>
 								<li>Wifi dual band (2.4GHz and 5GHz )</li>
-								<li></li>
+								<li>Wifi + Ethernet jusqu'à 4 fois plus rapide que le modèle précedent.</li>
+								<li>Lecteur de carte SD : qui fait office de ROM (investir dans une bonne carte pour éviter les mauvaises surprises).</li>
+								<li>GPIO qui permettent la connexion de cartes d'extension</li>
 							</ul>
 						</aside>
 					</section>
@@ -208,6 +215,62 @@
 					<section>
 						<h3>Software</h3>
 					</section>
+					<section>
+						<h4>OS compatibles</h4>
+						<ul>
+							<li class="fragment">Raspbian (Raspberry + Debian) 🌟</li>
+							<div class="fragment">
+								<li>RISC OS</li>
+								<li>RaspBSD</li>
+								<li>Ubuntu Core</li>
+								<li>Windows 10 IoT Core <img src="img/trollface.png" width="8%" style="padding: 0; margin: 0;"> </li>
+								<li>...</li>
+							</div>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Raspbian (= Raspberry + Debian)</li>
+								<li>Pas mal de distro dédiées comme la recallbox qui pour la transformer en console de jeux, des distos de media center, etc.</li>
+								<li>Je vous recommande pas Windows 10 IoT, il souffre d'une lenteur extrême d'après des REX !</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h4>NOOBS (New Out Of the Box Software)</h4>
+						<img class="fragment" src="img/noobs.png" alt="OS choosing screen in NOOBS" width="80%">
+						<aside class="notes">
+							<ul>
+								<li>L'outil facilite grandement l'installation d'un SE pour les débutants</li>
+								<li>Il suffit de télécharger l'archive, la décompresser et copier les fichiers sur la carte SD</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>Exemples de projets</h3>
+					</section>
+					<section>
+						<h4>Hotspot Wi-Fi</h4>
+
+					   	<div class="container">
+							<div style="float:left;width:49%">
+								<img src="img/freewifi.jpg" width="100%" alt="A free wifi sign in a beach.">
+							</div>
+							<div style="float:right;width:49%">
+								<img class="fragment" src="img/raspAP.png" width="100%" alt="raspAP logo.">
+							</div>
+						</div>
+						<aside class="notes">
+							<ul>
+								<li>Mise en place d'un hotspot wifi gérable de façon indépendante de la box du FAI.</li>
+								<li>Utile par exemple pour proposer un "wifi invité" accécible par des candidats qu'on fait patienter à l'accueil.</li>
+								<li>si on ajoute une autre interface wifi, on peut même transformer le hotspot en répéteur wifi pour augmenter la portée de la box.</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<img src="img/raspAp-screenshot.gif" alt="raspAP web dashboard screenshot">
+					</section>
+
 				</section>
 			</div>
 		</div>
