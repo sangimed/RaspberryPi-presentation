@@ -218,7 +218,7 @@
 					<section>
 						<h4>OS compatibles</h4>
 						<ul>
-							<li class="fragment">Raspbian (Raspberry + Debian) 🌟</li>
+							<li class="fragment">Raspbian (= Raspberry + Debian) 🌟</li>
 							<div class="fragment">
 								<li>RISC OS</li>
 								<li>RaspBSD</li>
@@ -270,7 +270,132 @@
 					<section>
 						<img src="img/raspAp-screenshot.gif" alt="raspAP web dashboard screenshot">
 					</section>
+					<section>
+						<h4>Vidéosurveillance</h4>
 
+						<div class="container">
+							<div style="float:left;width:49%">
+								<img src="img/sec-camera-simpsons.gif" width="100%" alt="A gif from The simpsons show involving a security camera.">
+							</div>
+							<div style="float:right;width:49%">
+								<img class="fragment" src="img/mentionEyeOS-logo.jpg" width="100%" alt="mentionEyeOS logo.">
+							</div>
+						</div>
+						
+						<aside class="notes">
+							<ul>
+								<li>Mise en place d'un système de Vidéosurveillance. Et cela, à l'aide d'un OS dédié qui s'appelle MotionEyeOS. Un outils très puissant avec pas mal de fonctionnalités.</li>
+								<li>n'importe quelle caméra USB fera l'affaire</li>
+								<li>Motion capture (detection de mouvement avec upload sur un service cloud dés qu'il y a un mouvement par exemple)</li>
+								<li>cf: https://github.com/ccrisan/motioneyeos/wiki/Features</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<img src="img/motionEyeOs-settings-panel.png" alt="motionEyeOs dashboard screenshot.">
+					</section>
+					<section>
+						<h4>Monitoring salle serveurs</h4>
+						<figure>
+							<img src="img/sensors-block-diag.png" width="75%">
+							<figcaption>
+								<q>Temperature and Humidity Monitoring System in Server Room Using Raspberry Pi</q> IJSTR (October 2019 Edition)
+							</figcaption>
+						</figure>
+						<aside class="notes">
+							<ul>
+								<li>une utilisation un peu plus costaud du Rpi</li>
+								<li>Le schéma est tiré d'un rapport de publication dans le </li>
+								<li>Un système plus au moins similaire a été mis en place en 2016 à Polytech'Lille (il utilise en plus de ça un arduino comme proxy entre les capteurs et le rpi)</li>
+								<li>Mise en place de capteurs de température à bas-coût dans une salle machines.</li>
+								<li>< 290€ TTC</li>
+								<li>voir l'étude complète au bout du lien dans l'annexe</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<!-- Démonstrations -->
+				<section data-background="img/matrix-fail.gif">
+					<h2>Démos</h2>
+				</section>
+				
+				<!-- Pourquoi l’utiliser ? -->
+				<section>
+					<h2>Pourquoi l'utiliser ? 👍</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Coût</li>
+						<li class="fragment">Polyvalence</li>
+						<li class="fragment">Communauté</li>  
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Peu chèr (on peut se permettre d'acheter 2 ou même plus poure faire du clustering de Rpi</li>
+							<li>Comme il peut faire à peu près tout ce qu'un ordinateur classique peut faire, seule limite c'est l'imagination (et les perfs).</li>
+							<li>Communauté ++. multitude de projets (awesome rasp) et ungrand choix de modules hardwares</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<script class="fragment" type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script>
+					<script type="text/javascript">
+						trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"raspberry pi","geo":"US","time":"today 12-m"},{"keyword":"Orange Pi","geo":"US","time":"today 12-m"},{"keyword":"Banana Pi","geo":"US","time":"today 12-m"},{"keyword":"Rock64","geo":"US","time":"today 12-m"},{"keyword":"Odroid","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=raspberry%20pi,Orange%20Pi,Banana%20Pi,Rock64,Odroid&date=today 12-m,today 12-m,today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+					</script>
+				</section>
+
+				<!-- Pourquoi ne pas l’utiliser ? -->
+				<section>
+					<h2>Pourquoi ne pas l'utiliser ? 👎</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Performances</li>
+						<li class="fragment">🔥</li>
+						<li class="fragment">Carte SD</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Perfs :architecture ARM bloquante pour certains projets.</li>
+							<li>surchauffe car pas de ventilo, mais des ventilos compatibles sont dispos.</li>
+							<li>Carte SD : il faut investir dans une bonne SD si on est sur un projet qui nécessite bcp de dectures/écritures</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Conclusion</h2>
+					<aside class="notes">
+						<ul>
+							<li>Le Rpi est en fin de compte une très bonne alternative à un PC dans le contexte entreprise quand il s'agit de faire du prototyping de projet</li>
+							<li>Peut être utilisé en guise de serveur de démo</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h3>Liens utiles</h3>
+				</section>
+				<section>
+					<a href="https://projects.raspberrypi.org/en/ ">https://projects.raspberrypi.org/en/ </a>
+					<div class="stretch">
+						<iframe data-src="https://projects.raspberrypi.org/en/" width="110%" height="100%"></iframe>
+					</div>
+				</section>
+				<section>
+					<a href="https://awesome-rpi.netlify.com/">https://awesome-rpi.netlify.com/</a>
+					<div class="stretch">
+						<iframe style="background-color: azure;" data-src="https://awesome-rpi.netlify.com/" width="110%" height="100%"></iframe style="background-color: azure;" >
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>le nécessaire pour s'amuser avec votre pri.</li>
+						</ul>
+					</aside>
+				</section>
+				<section data-background="img/joker-stairs.gif">
+					<h2>THIS IS THE END</h2>
+					<h3>(Des questions ?)</h3>
 				</section>
 			</div>
 		</div>
