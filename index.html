@@ -41,6 +41,7 @@
 						<ul>
 							<li>Présentation brève en une ou deux phrase.</li>
 							<li>C'est mon premier 12@13.</li>
+							<li>Vous pouvez m'interrompre</li>
 						</ul>
 					</aside>
 				</section>
@@ -56,6 +57,14 @@
 						<li class="fragment">Pourquoi ne pas l'utiliser ?</li>
 						<li class="fragment">Conclusion</li>
 					</ol>
+					<aside class="notes">
+						<ul>
+							<li>préz gnle (définitions +  historique + aspect hardware software + projet existant)</li>
+							<li>2 petites démos (déploiement d'une appli spring + Mise en place d'un service cloud auto hebergé à l'aide de docker)</li>
+							<li>des points forts et points faible du Rpi</li>
+							<li>Une conclusion (verdict + quelques liens utiles)</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- Présentation générale -->
@@ -77,19 +86,32 @@
 						</blockquote>
 						<img src="img/rpi-creditcard.JPG" alt="A Raspberry Pi on top of a credit card" style="width: 50%;">
 						<aside class="notes">
-							TODO : fill this.
+							<ul>
+								<li>Un nano ordinateur de la taille d'une CB</li>
+								<li>Particularité d'être abordable financierement (coute une 40aine d'euros)</li>
+								<li>A l'origine déstiné à l'aprentissage de l'informatique dans les écoles partout dans le monde.</li>
+								<li>mais on verra par la suite de cette préz que ses utilisations sont bien plus diverses</li>
+							</ul>
 						</aside>
 					</section>
 					<section>
 						<img src="img/official-rpi-case.jpg" width="45%" alt="A Rpi with the official case.">
+						<aside class="notes">
+							<li>A quoi ça ressemble</li>
+						</aside>
 					</section>
+
+					<section>
+						<img src="img/lego_case.jpg" alt="a lego case for the Rpi.">
+					</section>
+
 					<section>
 						<ul>
 							<li>Créé en 2012</li>
 							<li class="fragment">19M d'unités vendues (2018)</li>
 							<li class="fragment">🏭 → Chine, Pays de Galles et Japan</li>
 							<li class="fragment">⚠️ Rpi ≠ Arduino !</li>
-							<li class="fragment">Le premier modèle → <code>Model A</code></li>
+							<li class="fragment">Le premier modèle → <code>1 B</code></li>
 						</ul>
 						<img src="img/rpi-logo.png" alt="Raspberry pi logo (small)" width="30%">
 						<aside class="notes">
@@ -123,6 +145,13 @@
 							<li><b>"Raspberry"</b> → comme Apple 🍏, Tangerine Computers 🍊, Apricot Computers...</li>
 							<li class="fragment"><b>"Pi"</b> → Python Interpreter 🐍</li>
 						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Raspberry : c'est un hommage à une vieille tradition qui consiste à nommer les ordinateurs par des noms de fruit.</li>
+								<li>Pi (Python Interpreter) : car à l'origine destiné à ne faire tourner que du Python</li>
+								<li>ça doit probablement remonté à l'époque du prototypage</li>
+							</ul>
+						</aside>
 					</section>
 
 					<!-- Hardware -->
@@ -133,7 +162,11 @@
 						<img src="img/rpi-models-list.png" alt="List of all the Raspberry Pi models">
 						<aside class="notes">
 							<ul>
-								<li>(A, A+, B, B+ sont des mise à jours incrémentales)</li>
+								<li>2 niveau dans le système de nommage</li>
+								<li>Niv 1 PI 1, 2, 3 indique la génération (ou la famille)</li>
+								<li>une génération tous les 2/3 ans</li>
+								<li>Niv 2: modèle indique la puissance et les fonctionnalités</li>
+								<li>pas comme système de notes US (donc le A inférieur à B)</li>
 							</ul>
 						</aside>
 					</section>
@@ -155,6 +188,7 @@
 						<aside class="notes">
 							<ul>
 								<li>Sortie de la commande executé sur la Rpi connecté à l'écran d'accueil (sur lequel est hebergé l'appli welcome)</li>
+								<li>fabriqué par une usine de Sony aux royaumes unis</li>
 								<li>La ligne "revision" permet d'identifier le modèle du Rpi.</li>
 								<li>En googlant ce code, on trouve le modèle qui lui est associé.</li>
 							</ul>
@@ -201,12 +235,14 @@
 						<aside class="notes">
 							<ul>
 								<li>un SoC (System on a Chip) de la marque Broadcom </li>
-								<li>Ajout d'un dissipateur thermique ajouté par rapport à la version précédente qui permet une meilleure aération</li>
+								<li>Ajout d'un dissipateur th,ermique ajouté par rapport à la version précédente qui permet une meilleure aération</li>
 								<li>PoE (Power Over Ethernet) qui permet d'alimenter le Rpi grâce au câble ethernet (avec un module supplémentaire à brancher aux 4 pins isolés).</li>
+								<li>permet d'économiser une prise secteur</li>
 								<li>Wifi dual band (2.4GHz and 5GHz )</li>
-								<li>Wifi + Ethernet jusqu'à 4 fois plus rapide que le modèle précedent.</li>
+								<li>Wifi + Ethernet jusqu'à (sur papier) 4 fois plus rapide que le modèle précedent.</li>
 								<li>Lecteur de carte SD : qui fait office de ROM (investir dans une bonne carte pour éviter les mauvaises surprises).</li>
-								<li>GPIO qui permettent la connexion de cartes d'extension</li>
+								<li>GPIO ( ports d'entrée/sortie) qui permettent la connexion de cartes d'extension (robotiques, capture de temp, LED)</li>
+								<li>GPIO : partie pas exploité donc peut pas vous en dire plus)</li>
 							</ul>
 						</aside>
 					</section>
@@ -230,7 +266,8 @@
 						<aside class="notes">
 							<ul>
 								<li>Raspbian (= Raspberry + Debian)</li>
-								<li>Pas mal de distro dédiées comme la recallbox qui pour la transformer en console de jeux, des distos de media center, etc.</li>
+								<li>Pas mal de distro dédiées comme la recallbox qui pour la transformer en console de jeux</li>
+								<li>des distos de media center</li>
 								<li>Je vous recommande pas Windows 10 IoT, il souffre d'une lenteur extrême d'après des REX !</li>
 							</ul>
 						</aside>
@@ -242,6 +279,7 @@
 							<ul>
 								<li>L'outil facilite grandement l'installation d'un SE pour les débutants</li>
 								<li>Il suffit de télécharger l'archive, la décompresser et copier les fichiers sur la carte SD</li>
+								<li>choisir parmis la panoplies d'OS</li>
 							</ul>
 						</aside>
 					</section>
@@ -287,7 +325,8 @@
 								<li>Mise en place d'un système de Vidéosurveillance. Et cela, à l'aide d'un OS dédié qui s'appelle MotionEyeOS. Un outils très puissant avec pas mal de fonctionnalités.</li>
 								<li>n'importe quelle caméra USB fera l'affaire</li>
 								<li>Motion capture (detection de mouvement avec upload sur un service cloud dés qu'il y a un mouvement par exemple)</li>
-								<li>cf: https://github.com/ccrisan/motioneyeos/wiki/Features</li>
+								<li>generation de timelapse</li>
+								<li>Alternative robuste aux systèmes de surveillances qu'on trouve dans le commerce.</li>
 							</ul>
 						</aside>
 					</section>
@@ -318,6 +357,12 @@
 				<!-- Démonstrations -->
 				<section data-background="img/matrix-fail.gif">
 					<h2>Démos</h2>
+					<aside class="notes">
+						<ul>
+							<li>Spring Boot : on peut bien sur améliorer ça en créant un service qui lance l'appli à chaque démarrage sans à avoir à le faire manuellement àa chaque fois 
+								... bref c'est du linux vous faites comme sur un pc</li>
+						</ul>
+					</aside>
 				</section>
 				
 				<!-- Pourquoi l’utiliser ? -->
